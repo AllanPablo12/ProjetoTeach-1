@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teach</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/page-landing.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/search.css">
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="/styles/give-classes.css">
+    <link rel="stylesheet" href="/styles/login.css">
+    <script src="/scripts/script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <header id="nav-container">
+        <div id="menu-aside">
+            <span onclick="openNav()">&#9776; </span>
+        </div>
+        <div id="logo-container">
+            <!--<a href="#landing-page" id="logo" onclick="ajaxText(event)">  -->
+            <a href="/" id="logo" onclick="ajaxText(event)">
+                <img src="/images/logo.svg" alt="">
+            </a>
+            <p> <a href="/" id="text" onclick="ajaxText(event)">TEACH</a> </p>
+            <!--<p> <a href="#landing-page" id="text" onclick="ajaxText(event)">TEACH</a> </p> -->
+        </div>
+        <nav id="navegation">
+            <ul>
+                <li>
+                   <!-- <a href="#who-we-are" id="whoweare">Quem Somos</a>--> 
+                    <a href="/who-we-are" id="whoweare">Quem Somos</a>
+                </li>
+                <li>
+                    
+                    <!-- <a href="#search-page">Procurar Matéria</a>--> 
+                    <a href="/search-page">Procurar Matéria</a>
+                </li>
+                <li>
+                    <!-- <a href="#work-for-us">Trabalhe Conosco</a>--> 
+                    
+                    <a href="/work-for-us">Trabalhe Conosco</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="mySidenav" class="sidenav">
+            <ul>
+                <li>
+                    <a href="/who-we-are">Quem Somos</a>
+
+                </li>
+                <li>
+                    <a href="/search-page">Procurar Matéria</a>
+                    
+                </li>
+                <li>
+                    
+                    <a href="/work-for-us">Trabalhe Conosco</a>
+                </li>
+                
+            </ul>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          </div>
+        </div>
+    </header>
+
+    
+    <main id="container2">
+        <div class="form-container">
+            <div class="classes-container">
+                <form action="/delete-classes" method="POST" id="create-teach">
+                    {%for proffy in proffys %}
+                    <fieldset>
+                        <h2>Seus dados</h2>
+                        <div class="input-area">
+                            <p>Id</p>
+                            <input type="text" name="id" id="id" value="{{proffy.id}}" >
+                        </div>
+                        <div class="input-area">
+                            <p>Nome Completo</p>
+                            <input type="text" name="name" id="name" value="{{proffy.name}}" >
+                        </div>
+                        <div class="input-area">
+                            <p>Link da sua foto </p>
+                            <input type="text" name="avatar" id="avatar"value="{{proffy.avatar}}" >
+                        </div>
+                        <div class="input-area">
+                            <p>Telefone</p>
+                            <input type="number" name="whatsapp" id="whatsapp" value="{{proffy.whatsapp}}">
+                        </div>
+                        <div class="input-area">
+                            <p>Email</p>
+                            <input type="email" name="email" id="email" value="{{proffy.email}}">
+                        </div>
+                        <div class="input-area">
+                            <p>Biografia</p>
+                            <textarea type="text" name="bio" id="bio" value="{{proffy.bio}}">
+                            </textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <h2>Sobre a aula</h2>
+                        <div class="select-area">
+                            <p>Matéria</p>
+                            <select name="subject" id="subject" >
+                                <option value="">Selecione uma opção</option>
+                                {%for subject in subjects %}
+                                <option value="{{loop.index}}">
+                                    {{subject}}
+                                </option>
+                            {%endfor%}
+                            </select>
+                        </div>
+                        <div class="input-area">
+                            <p>Custo da sua hora/aula <small>(R$)</small></p>
+                            <input type="number" name="cost" id="cost" >
+                        </div>
+                    </fieldset>
+
+                    <div class="button-form">
+                        <button type="submit" form="create-teach" style="background-color: red;">Deletar Conta</button>
+                    </div>
+                    {%endfor%}
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    
+</body>
+
+<script>
+
+    
+
+</script>
+
+</html>

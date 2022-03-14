@@ -1,0 +1,266 @@
+header{
+    position: absolute;
+    width: 100%;
+    height: 8rem;
+    left: 0px;
+    top: 0px;
+}
+
+#menu-aside,
+#menu-aside span{
+    display: none;
+}
+
+#nav-container{
+    z-index: 1;
+}
+
+#logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 100px;
+
+}
+
+#logo-container p{
+    font-weight: 700;
+    font-size: 4rem;
+    padding-left: 1rem;
+}
+
+#logo-container #text{
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+}
+
+#logo-container img{
+    width: 70px;
+}
+
+#logo-container #text:hover{
+    color: white;
+}
+
+#navegation{
+    width: 65%;
+}
+
+#navegation ul{
+    display: flex;
+    justify-items: flex-start;
+    justify-content: space-between;
+
+}
+
+#navegation li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0px 3rem;
+    
+}
+
+#navegation a{
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    transition: .3s;
+    
+}
+
+#navegation a:hover,
+#navegation a.selected{
+    color: white;
+}
+
+#navegation a:after,
+#logo-container #text:after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px black;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+#navegation a:hover:after,
+#logo-container #text:hover:after{
+    transform: scaleX(1);
+}
+
+#login-image a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    margin: 10px;
+
+}
+
+#container{
+    background: var(--color-background);
+
+    display: grid;
+    grid-template-columns: 1fr 50%;
+    height: 100%;
+    width: 100%;
+}
+
+#container a{
+    margin-top: 5rem;
+}
+
+#study-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#study-container h1{
+    font-size: 6.5rem;
+    width: 70%;
+
+}
+
+#study-container p{
+    font-size: 2rem;
+    font-weight: 600;
+    width: 70%;
+
+}
+
+#button-page{
+    text-decoration: none;
+    color: black;
+
+    background-color: var(--color-button);
+    border-radius: 3rem;
+
+    width: 25rem;
+    height: 6.4rem;
+    font: 700 2.4rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+#image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+
+@media (max-width:1361px){
+
+    #study-container h1{
+        font-size: 4.8rem;
+    }
+
+    #image-container img{
+        height: 550px;
+        padding-top: 2.4rem;
+    }
+
+}
+
+@media (max-width: 999px){
+    
+    #menu-aside,
+    #menu-aside span{
+        display: flex;
+        padding: 10px;
+        font-size:40px;
+        cursor:pointer
+    }
+
+    #navegation{
+        display: none;
+    }
+
+    #container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        margin-top: 5rem;
+    }
+
+    #study-container h1,
+    #study-container p{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media(max-width: 699px){
+    #menu-aside span{
+        display: flex;
+        padding: 10px;
+        font-size:35px;
+        cursor:pointer
+    }
+
+    #logo-container img{
+        width: 50px;
+    }
+
+    #login-image img{
+        width: 40px;
+    }
+
+    #image-container img{
+        height: 400px;
+    }
+}

@@ -1,0 +1,148 @@
+.form-container{
+    background-color: var(--color-background);
+
+    margin-top: 20rem ;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.form-container{
+    background-color: white;
+    height: 80%;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 2rem;
+}
+
+.classes-container{
+    width: 100%;
+    padding: 5rem;
+}
+
+fieldset{
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset h2{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.input-area{
+    display: flex;
+    flex-direction: column;
+
+    margin: 0.4rem 0;
+}
+
+.input-area input,
+.select-area select,
+.input-area textarea{
+    width: 100%;
+    height: 4rem;
+    border-radius: 0.8rem;
+    background: #e5e5f8;
+    border: 1px solid white;
+
+    margin-top: 0.8rem;
+}
+
+.schedule-items legend{
+    font-size: 24px;
+    font-weight: 600;
+    
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+}
+
+.schedule-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.schedule-item .input-areas,
+.schedule-item .select-areas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2.8rem;
+
+    
+}
+
+.input-areas{
+    width: 15%;
+}
+
+.select-areas{
+    width: 30%;
+}
+
+.schedule-item .input-areas input,
+.schedule-item .select-areas select{
+    width: 100%;
+    height: 4rem;
+    border-radius: 0.8rem;
+    background: #e5e5f8;
+    border: 1px solid #E6E6F0;
+
+    margin-top: 0.8rem;
+}
+
+.button-form button{
+    margin-top: 2.4rem;
+    height: 5.6rem;
+    width: 100%;
+    background: var(--color-button-seach);
+    color: white;
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.6rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+@media(max-width:1361px){
+    .form-container{
+        margin-top: 40rem;
+        height: 70%;
+    }
+}
+
+@media (max-width:699px){
+
+    .form-container{
+        width: 100%;
+    }
+
+    .schedule-items legend{
+        font-size: 16px;
+    }
+
+    .schedule-item{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .schedule-item .input-areas,
+    .schedule-item .select-areas{
+    width: 100%;
+}
+}
+

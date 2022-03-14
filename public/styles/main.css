@@ -1,0 +1,68 @@
+:root{
+    --color-background: #F8D2C9;
+    --color-nav: #FF725E;
+    --color-background-profile: #F0F0F7;
+    --color-button: #F9F2F1;
+    --color-button-seach: #04D361;
+    --color-input: #EFEFFA;
+    --color-hour: #8257E5;
+    --color-delete: rgb(240, 46, 46);
+    --color-update: rgb(219, 191, 30);
+    --color-logout: rgb(194, 100, 12);
+
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,body{
+    height: 100vh;
+}
+
+body{
+    background-color: var(--color-background-profile);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header{
+    background-color: var(--color-nav);
+    display: flex;
+    align-items: center;
+}
+
+#nav-container2{
+    justify-content: space-between;
+}
+
+body,input,button{
+    font: 500 1.6rem Poppins;
+}
+
+
+
+@media (max-width: 1361px){
+    :root{
+        font-size: 60%;
+    }
+
+}
+
+@media (max-width: 999px){
+    :root{
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 699px){
+    :root{
+        font-size: 40%;
+    }
+}

@@ -1,0 +1,174 @@
+#logo-picture img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+
+.profile-container{
+    height: 800px;
+    padding: 3rem;
+    width: 100%;
+}
+
+.profile-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-button .update-button{
+    margin-top: 2.4rem;
+    height: 5.6rem;
+    width: 100%;
+    background: var(--color-update);
+    color: white;
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.6rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.profile-button .delete-button{
+    margin-top: 2.4rem;
+    height: 5.6rem;
+    width: 100%;
+    background: var(--color-delete);
+    color: white;
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.6rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.profile-button .logout-button{
+    margin-top: 2.4rem;
+    height: 5.6rem;
+    width: 100%;
+    background: var(--color-logout);
+    color: white;
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.6rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.profile-info{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 8.4rem;
+}
+
+.profile-info img{
+    height: 100px;
+}
+
+.profile-info div{
+    display: flex;
+    flex-direction: column;
+    
+    margin-left: 4rem;
+}
+
+.profile-info div a{
+    text-decoration: none;
+    color: black;
+
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.profile-info div label{
+    font-size: 18px;
+}
+
+.profile-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-bottom: 1px solid gray;
+
+    margin-bottom: 8rem;
+}
+
+.profile-option a{
+    text-decoration: none;
+    color: black;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    transition: .3s;
+}
+
+.profile-option a:hover,
+.profile-name:hover,
+#button-page:hover{
+    color: #726e6e;
+}
+
+.bio-container,
+.contact-container{
+
+    height: 50%;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    width: 50%;
+}
+
+.bio-container p,
+.bio-container strong,
+.contact-container p{
+    margin-top: 2rem;
+}
+
+.bio-container h2{
+    margin-top: 1rem;
+}
+
+.class-cost div{
+    display: flex;
+    align-items: center;
+    width: 18%;
+    justify-content: space-between;
+}
+
+.class-cost strong{
+    color: var(--color-button-seach);
+}
+
+@media(max-width: 1361px){
+    .profile-container{
+        height: 530px;
+    }
+
+    .class-cost div{
+        width: 30%;
+    }
+}
+
+@media(max-width: 699px){
+
+    .class-cost div{
+        width: 40%;
+    }
+}
